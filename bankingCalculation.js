@@ -26,22 +26,39 @@ document.getElementById('withdraw-btn').addEventListener('click',function(){
     withDrawValue=parseFloat(withDrawValue);
     withDraw.value='';
 
-    //add withdraw balance
-    let total=document.getElementById('withdraw-balance').innerText;
-    total=parseFloat(total);
-    let totalWithdraw=0;
-    totalWithdraw=parseFloat(withDrawValue+total);
-    document.getElementById('withdraw-balance').innerText=totalWithdraw;
 
-    //calculate total balnce
+
+
+    //calculate total balnce & add withdraw balance
     
      let currentTotalbalance=document.getElementById('total-balance').innerText;
      currentTotalbalance=parseFloat(currentTotalbalance);
 
-     //update total balance
+     if(withDrawValue>currentTotalbalance){
+        console.log('invalid');
+    }
+    else{
+        let total=document.getElementById('withdraw-balance').innerText;
+        total=parseFloat(total);
+        let totalWithdraw=0;
+        totalWithdraw=parseFloat(withDrawValue+total);
+        document.getElementById('withdraw-balance').innerText=totalWithdraw;
 
-     let updateBalance=parseFloat(currentTotalbalance-withDrawValue) ;
-     document.getElementById('total-balance').innerText=updateBalance;
+    }
+
+     //update total balance
+     if(withDrawValue>currentTotalbalance){
+        console.log('invalid');
+    }
+    else{
+        let updateBalance=parseFloat(currentTotalbalance-withDrawValue) ;
+        document.getElementById('total-balance').innerText=updateBalance;
+
+    }
+
+
+
+ 
      
 
 
