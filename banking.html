@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banking page</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header class="">
+        <h1 class="text-4xl text-center mt-16  text-red-600">Welcome To Banking</h1>
+    </header>
+
+    <main class="   flex  justify-evenly mt-16 ">
+        <div class=" border-2 w-1/4 text-center p-12 bg-green-300 rounded-lg">
+            <h1 class="text-4xl">$<span id="deposit-balance">00</span></h1>
+        </div>
+        <div class="border-2 w-1/4 text-center p-12 bg-blue-300 rounded-lg">
+            <h1  class="text-4xl">$<span id="withdraw-balance">00</span></h1>
+        </div>
+        <div  class="border-2 w-1/4 text-center p-12 bg-pink-300 rounded-lg">
+            <h1 class="text-4xl">$<span id="total-balance">00</span></h1>
+        </div>
+    </main>
+
+     <div class="flex  justify-center gap-4 mt-16">
+         <div class="border-2 text-center p-12 bg-green-300 w-4/12 rounded-lg">
+             <input id="deposit" class="block mb-2 py-2 px-2 rounded w-full" type="number"> <br>
+             <button id="deposit-btn" class="bg-green-500 px-4 py-2 rounded text-white font-semibold">Deposit</button>
+         </div>
+         <div class="border-2 text-center p-12 bg-green-300 w-4/12 rounded-lg">
+             <input id="withdraw" class="block mb-2 py-2 px-2 rounded w-full" type="number"> <br>
+             <button id="withdraw-btn" class="bg-red-500 px-4 py-2 rounded text-white font-semibold">Withdraw</button>
+         </div>
+     </div>
+
+    <script src="bankingCalculation.js"></script>
+</body>
+</html>
